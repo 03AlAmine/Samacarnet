@@ -1,0 +1,110 @@
+{
+  "LOGIN": {
+    "TITLE": "Bienvenue dans e-Hospital"
+  },
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "Menu"
+    },
+    "FROUNT-OFFICE": {
+      "TEXT": "Frount Office",
+      "LIST": {
+        "ADMISSION": "Admission Inquiry",
+        "VISITORS": "Visitors Book",
+        "COMPLAINTS": "Complaints"
+      }
+    },
+    "DASHBOARD": {
+      "TEXT": "Tableau de bord",
+      "LIST": {
+        "DASHBOARD1": "Tableau de bord 1",
+        "DASHBOARD2": "Tableau de bord 2",
+        "GENERAL": "Général",
+        "HOSPITAL": "Hôpital",
+        "DOCTOR-DASHBOARD": "Tableau de bord des Docteurs",
+        "PATIENT-DASHBOARD": "Tableau de bord des Patients"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Docteurs",
+      "LIST": {
+        "ALL-DOCTORS": "All Doctors",
+        "ADD-DOCTOR": "Add Doctor",
+        "EDIT-DOCTOR": "Edit Doctor",
+        "ABOUT-DOCTOR": "About Doctor",
+        "DOCTOR-TIMETABLE": "Doctor Timetable",
+        "ASSIGN-CLASS-DOCTOR": "Assign Class Doctor"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Patients",
+      "LIST": {
+        "ALL-PATIENTS": "All Patients",
+        "ADD-PATIENT": "Add Patient",
+        "EDIT-PATIENT": "Edit Patient",
+        "ABOUT-PATIENT": "About Patient",
+        "PATIENT-ATTENDANCE": "Patient Attendance"
+      }
+    },
+    "DOCTOR": {
+      "TEXT": "Docteur",
+      "LIST": {
+        "DASHBOARD": "Tableau de bord",
+        "RDV": "Rendez-vous",
+        "HOSPITAL": "Hôpital",
+        "PATIENT": "Mes Patients",
+        "CONSULTATION": "Mes Consultations",
+        "TIME-TABLE": "Mon Emploi du Temps"
+      }
+    },
+    "PATIENT": {
+      "TEXT": "Patient",
+      "LIST": {
+        "DASHBOARD": "Tableau de bord",
+        "RDV": "Rendez-vous",
+        "MEDICAL-FILE": "Dossier Médical",
+        "TIME-TABLE": "Emploi du Temps",
+        "PROFILE": "Mon Profil",
+        "DOCTORS" : "Docteurs"
+      }
+    },
+    "GENERAL": {
+      "TEXT": "Général",
+      "LIST": {
+        "ABOUT": "À propos",
+        "CONTACT-US": "Contactez-nous",
+        "HELP": "Aide",
+        "SETTINGS": "Paramètres"
+      }
+    },
+    "APPS": {
+      "TEXT": "Gestion"
+    },
+    "CALENDAR": {
+      "TEXT": "Rendez-vous"
+    },
+    "HOSPITALS": {
+      "TEXT": "Hôpitaux"
+    },
+    "PROFILE": {
+      "TEXT": "Mon Profil",
+      "LIST": {
+        "VIEW-PROFILE": "Voir le Profil",
+        "EDIT-PROFILE": "Modifier le Profil",
+        "CHANGE-PASSWORD": "Changer le Mot de Passe"
+      }
+    },
+    "MESSAGES": {
+      "TEXT": "Messages",
+      "LIST": {
+        "INBOX": "Boîte de Réception",
+        "SENT": "Envoyés",
+        "DRAFTS": "Brouillons",
+        "TRASH": "Corbeille"
+      }
+    },
+    "NEW": {
+      "TEXT" : "Nouveau"
+    }
+  }
+}

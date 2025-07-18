@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h3 class="mb-0">{{ isEditMode ? 'Modifier' : 'Créer' }} un Rendez-vous</h3>
+    <button type="button" class="btn btn-outline-primary" routerLink="/patient/myappointment">
+      <i class="fas fa-list me-1"></i> Mes Rendez-vous
+    </button>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+
+      <!-- Sélection de la spécialité -->
+      <div class="mb-3">
+        <label class="form-label">Spécialité</label>
+        <select class="form-select" formControlName="speciality">
+          <option value="">Choisir une spécialité...</option>
+          <option *ngFor="let spec of specialities" [value]="spec">{{ spec }}</option>
+        </select>
+      </div>
+
+      <!-- Sélection du médecin -->
+      <div class="mb-3">
+        <label class="form-label">Médecin</label>
+        <select class="form-select" formControlName="doctor_id">
+          <option value="">Sélectionner un médecin</option>
+          <option *ngFor="let doctor of filteredDoctors" [value]="doctor.id">
+            {{ doctor.user.first_name }} {{ doctor.user.last_name }}
+            <span *ngIf="doctor.speciality">({{ doctor.speciality }})</span>
+          </option>
+        </select>
+        <div *ngIf="filteredDoctors.length === 0 && appointmentForm.get('speciality')?.value"
+          class="text-muted small mt-1">
+          Aucun médecin disponible pour cette spécialité.
+        </div>
+      </div>
+
+      <!-- Sélection de la date et heure -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-control" formControlName="appointment_date" [min]="minDate">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Heure</label>
+          <select class="form-select" formControlName="slot">
+            <option value="">Sélectionner un créneau</option>
+            <option *ngFor="let slot of availableSlots" [value]="slot">{{ slot }}</option>
+          </select>
+          <div *ngIf="appointmentForm.get('doctor_id')?.value && availableSlots.length === 0"
+            class="text-muted small mt-1">
+            Aucun créneau disponible pour ce médecin à cette date.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Champ motif -->
+      <div class="mb-3">
+        <label class="form-label">Motif (optionnel)</label>
+        <textarea class="form-control" formControlName="reason" rows="3"></textarea>
+      </div>
+
+      <!-- Boutons -->
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" routerLink="/patient/myappointment">Annuler</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!appointmentForm.valid || isSubmitting">
+          <span *ngIf="isSubmitting && !isEditMode">Création en cours...</span>
+          <span *ngIf="isSubmitting && isEditMode">Mise à jour en cours...</span>
+          <span *ngIf="!isSubmitting">{{ isEditMode ? 'Mettre à jour' : 'Créer' }}</span>
+        </button>
+      </div>
+      <!-- Messages d'état -->
+      <div *ngIf="successMessage" class="alert alert-success mt-3 d-flex justify-content-between align-items-center">
+        <div>
+          <i class="fas fa-check-circle me-2"></i> {{ successMessage }}
+        </div>
+        <button routerLink="/patient/myappointment" class="btn btn-sm btn-outline-success">
+          <i class="fas fa-list"></i> Voir mes rendez-vous
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

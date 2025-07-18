@@ -1,0 +1,10 @@
+<section class="content">
+    <div class="content-block">
+        @for(breadscrum of breadscrums; track breadscrums){
+            <div class="block-header">
+                <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active" [route]="breadscrum.route">
+                </app-breadcrumb>
+            </div>
+        }
+    </div>
+</section>

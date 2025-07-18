@@ -1,0 +1,496 @@
+{
+  "routes": [
+    {
+      "path": "",
+      "title": "MENUITEMS.MAIN.TEXT",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["All"],
+      "submenu": []
+    },
+    {
+      "path": "",
+      "title": "MENUITEMS.DASHBOARD.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "space_dashboard",
+      "class": "menu-toggle",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": [
+        {
+          "path": "/superadmin/dashboard",
+          "title": "MENUITEMS.DASHBOARD.LIST.GENERAL",
+          "iconType": "",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        }
+      ]
+    },
+    {
+      "path": "",
+      "title": "MENUITEMS.APPS.TEXT",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": []
+    },
+    {
+      "path": "/superadmin/hospital",
+      "title": "MENUITEMS.HOSPITALS.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "local_hospital",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": []
+    },
+    {
+      "path": "/superadmin/admin",
+      "title": "MENUITEMS.ADMINS.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "admin_panel_settings",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": []
+    },
+    {
+      "path": "/superadmin/doctor",
+      "title": "MENUITEMS.DOCTORS.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "medical_services",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": []
+    },
+    {
+      "path": "/superadmin/patient",
+      "title": "MENUITEMS.PATIENTS.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "groups",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": []
+    },
+    {
+      "path": "",
+      "title": "Parametres",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": []
+    },
+    {
+      "path": "/superadmin/settings",
+      "title": "Parametres",
+      "iconType": "material-icons-outlined",
+      "icon": "settings",
+      "class": "menu-toggle",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Superadmin"],
+      "submenu": 
+      [
+        {
+          "path": "/superadmin/profile",
+          "title": "Profil",
+          "iconType": "",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        },
+        {
+          "path": "/superadmin/role",
+          "title": "Role",
+          "iconType": "",
+          "icon": "",
+          "class": "",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        }
+      ]
+    },
+
+  
+
+    {
+      "path": "",
+      "title": "MENUITEMS.DASHBOARD.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "space_dashboard",
+      "class": "menu-toggle",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Admin"],
+      "submenu": [
+        {
+          "path": "/admin/dashboard/dashboard2",
+          "title": "MENUITEMS.DASHBOARD.LIST.GENERAL",
+          "iconType": "",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        }
+      ]
+    },
+    {
+      "path": "/doctor/dashboard",
+      "title": "MENUITEMS.DOCTOR.LIST.DASHBOARD",
+      "iconType": "material-icons-outlined",
+      "icon": "space_dashboard",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+    {
+      "path": "/doctor/appointment",
+      "title": "MENUITEMS.DOCTOR.LIST.RDV",
+      "iconType": "material-icons-outlined",
+      "icon": "event_note",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+    {
+      "path": "/doctor/hospital",
+      "title": "MENUITEMS.DOCTOR.LIST.HOSPITAL",
+      "iconType": "material-icons-outlined",
+      "icon": "local_hospital",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+    {
+      "path": "/doctor/patient",
+      "title": "MENUITEMS.DOCTOR.LIST.PATIENT",
+      "iconType": "material-icons-outlined",
+      "icon": "groups",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+    {
+      "path": "/doctor/consultation",
+      "title": "MENUITEMS.DOCTOR.LIST.CONSULTATION",
+      "iconType": "material-icons-outlined",
+      "icon": "medical_services",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+
+    {
+      "path": "/patient/dashboard",
+      "title": "MENUITEMS.PATIENT.LIST.DASHBOARD",
+      "iconType": "material-icons-outlined",
+      "icon": "space_dashboard",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+    {
+      "path": "/patient/appointment",
+      "title": "MENUITEMS.PATIENT.LIST.RDV",
+      "iconType": "material-icons-outlined",
+      "icon": "calendar_month",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+    {
+      "path": "/patient/medical-file",
+      "title": "MENUITEMS.PATIENT.LIST.MEDICAL-FILE",
+      "iconType": "material-icons-outlined",
+      "icon": "folder_shared",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+    {
+      "path": "/doctor/schedule",
+      "title": "MENUITEMS.DOCTOR.LIST.TIME-TABLE",
+      "iconType": "material-icons-outlined",
+      "icon": "schedule",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+     {
+      "path": "/doctor/messages",
+      "title": "MENUITEMS.MESSAGES.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "mail",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+    {
+      "path": "/patient/doctor",
+      "title": "MENUITEMS.PATIENT.LIST.DOCTORS",
+      "iconType": "material-icons-outlined",
+      "icon": "groups",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+    {
+      "path": "/patient/messages",
+      "title": "MENUITEMS.MESSAGES.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "mail",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+    {
+      "path": "",
+      "title": "Information",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+    {
+      "path": "/patient/profile",
+      "title": "MENUITEMS.PATIENT.LIST.PROFILE",
+      "iconType": "material-icons-outlined",
+      "icon": "account_circle",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Patient"],
+      "submenu": []
+    },
+
+    {
+      "path": "",
+      "title": "MENUITEMS.APPS.TEXT",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Admin"],
+      "submenu": []
+    },
+    {
+      "path": "/admin/appointment",
+      "title": "MENUITEMS.CALENDAR.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "calendar_today",
+      "class": "",
+      "groupTitle": false,
+      "badge": "Nouveau",
+      "badgeClass": "badge bg-blue sidebar-badge float-end",
+      "role": ["Admin"],
+      "submenu": []
+    },
+    {
+      "path": "",
+      "title": "MENUITEMS.HOSPITALS.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "local_hospital",
+      "class": "menu-toggle",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Admin"],
+      "submenu": [
+        {
+          "path": "/admin/hospital/main",
+          "title": "MENUITEMS.GENERAL.TEXT",
+          "iconType": "",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        },
+        {
+          "path": "/admin/hospital/doctor",
+          "title": "MENUITEMS.DOCTORS.TEXT",
+          "iconType": "material-icons-outlined",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        },
+        {
+          "path": "/admin/hospital/admin",
+          "title": "MENUITEMS.ADMINS.TEXT",
+          "iconType": "material-icons-outlined",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        }
+      ]
+    },
+    {
+      "path": "/admin/patient",
+      "title": "MENUITEMS.PATIENTS.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "groups",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Admin"],
+      "submenu": []
+    },
+    {
+      "path": "",
+      "title": "Parametres",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Admin"],
+      "submenu": []
+    },
+    {
+      "path": "/admin/settings",
+      "title": "Parametres",
+      "iconType": "material-icons-outlined",
+      "icon": "settings",
+      "class": "menu-toggle",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Admin"],
+      "submenu": 
+      [
+        {
+          "path": "/admin/profile",
+          "title": "Mon Profil",
+          "iconType": "",
+          "icon": "",
+          "class": "ml-menu",
+          "groupTitle": false,
+          "badge": "",
+          "badgeClass": "",
+          "role": [""],
+          "submenu": []
+        }
+      ]
+    },
+    {
+      "path": "",
+      "title": "Information",
+      "iconType": "",
+      "icon": "",
+      "class": "",
+      "groupTitle": true,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    },
+     {
+      "path": "/doctor/profile",
+      "title": "MENUITEMS.PROFILE.TEXT",
+      "iconType": "material-icons-outlined",
+      "icon": "account_circle",
+      "class": "",
+      "groupTitle": false,
+      "badge": "",
+      "badgeClass": "",
+      "role": ["Doctor"],
+      "submenu": []
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+<!-- src/app/components/appointment-list/appointment-list.component.html -->
+<div class="card appointment-list-card">
+  <div class="card-header d-flex justify-content-between align-items-center bg-light">
+    <h3 class="mb-0 text-primary">
+      <i class="fas fa-calendar-alt me-2"></i>Liste des Rendez-vous
+    </h3>
+    <button routerLink="/patient/appointment" class="btn btn-primary">
+      <i class="fas fa-plus-circle me-2"></i>Nouveau Rendez-vous
+    </button>
+  </div>
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table table-hover table-striped mb-0">
+        <thead class="table-light">
+          <tr>
+            <th class="ps-4">Médecin</th>
+            <th>Spécialité</th>
+            <th>Hôpital</th>
+            <th>Date/Heure</th>
+            <th>Statut</th>
+            <th class="text-end pe-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let app of appointments" class="align-middle">
+            <td class="ps-4">
+              <div class="d-flex align-items-center">
+                <div class="avatar-sm bg-soft-primary rounded me-3">
+                  <i class="fas fa-user fa-lg text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">{{ app.patient?.first_name }} {{ app.patient?.last_name }}</h6>
+                  <small class="text-muted">ID: {{ app.patient?.id }}</small>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="avatar-sm bg-soft-info rounded me-3">
+                  <i class="fas fa-user-md fa-lg text-info"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0">{{ app.doctor?.first_name }} {{ app.doctor?.last_name }}</h6>
+                  <small class="text-muted">{{ app.doctor?.speciality }}</small>
+                </div>
+              </div>
+            </td>
+            <td>{{ app.hospital?.name }}</td>
+            <td>
+              <div class="fw-semibold">{{ app.appointment_date | date:'dd/MM/yyyy' }}</div>
+              <small class="text-muted">{{ app.appointment_date | date:'HH:mm' }}</small>
+            </td>
+            <td>
+              <span class="badge rounded-pill py-1 px-3" [ngClass]="{
+                'bg-warning': app.status === 'pending',
+                'bg-success': app.status === 'confirmed',
+                'bg-danger': app.status === 'cancelled'
+              }">
+                <i class="fas fa-circle me-1" style="font-size: 6px; vertical-align: middle;"></i>
+                {{ app.status | titlecase }}
+              </span>
+            </td>
+            <td class="text-end pe-4">
+              <div class="btn-group btn-group-sm" role="group">
+                <button [routerLink]="['/appointments/edit', app.id]" class="btn btn-outline-warning me-1"
+                  tooltip="Modifier" placement="top">
+                  <i class="fas fa-edit"></i>
+                </button>
+
+                <button *ngIf="app.status !== 'cancelled'" (click)="cancelAppointment(app.id)"
+                  class="btn btn-outline-danger me-1" tooltip="Annuler" placement="top">
+                  <i class="fas fa-times"></i>
+                </button>
+
+                <button (click)="deleteAppointment(app.id)" class="btn btn-outline-secondary" tooltip="Supprimer"
+                  placement="top">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr *ngIf="appointments?.length === 0">
+            <td colspan="6" class="text-center py-5 text-muted">
+              <i class="fas fa-calendar-times fa-3x mb-3"></i>
+              <h5>Aucun rendez-vous trouvé</h5>
+              <button routerLink="/appointments/create" class="btn btn-primary mt-2">
+                <i class="fas fa-plus-circle me-2"></i>Créer un rendez-vous
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<!-- src/app/components/appointment-form/appointment-form.component.html -->
+<div class="card">
+  <div class="card-header">
+    <h3>{{ isEditMode ? 'Modifier' : 'Créer' }} un Rendez-vous</h3>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Patient</label>
+        <select class="form-select" formControlName="patient_id">
+          <option value="">Sélectionner un patient</option>
+          <option *ngFor="let patient of patients" [value]="patient.id">
+            {{ patient.first_name }} {{ patient.last_name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Hôpital/Clinique</label>
+        <select class="form-select" formControlName="hospital_id">
+          <option value="">Sélectionner un hôpital</option>
+          <option *ngFor="let hospital of hospitals" [value]="hospital.id">
+            {{ hospital.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Médecin</label>
+        <select class="form-select" formControlName="doctor_id" [disabled]="!appointmentForm.get('hospital_id')?.value">
+          <option value="">Sélectionner un médecin</option>
+          <option *ngFor="let doctor of doctors" [value]="doctor.id">
+            {{ doctor.first_name }} {{ doctor.last_name }} ({{ doctor.specialty?.name }})
+          </option>
+        </select>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-control" formControlName="appointment_date">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Heure</label>
+          <select class="form-select" formControlName="appointment_time" 
+                  [disabled]="!appointmentForm.get('doctor_id')?.value || !appointmentForm.get('appointment_date')?.value">
+            <option value="">Sélectionner un créneau</option>
+            <option *ngFor="let slot of availableSlots" [value]="slot">
+              {{ slot }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Motif (optionnel)</label>
+        <textarea class="form-control" formControlName="reason" rows="3"></textarea>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" routerLink="/appointments">
+          Annuler
+        </button>
+        <button type="submit" class="btn btn-primary" [disabled]="!appointmentForm.valid">
+          {{ isEditMode ? 'Mettre à jour' : 'Créer' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

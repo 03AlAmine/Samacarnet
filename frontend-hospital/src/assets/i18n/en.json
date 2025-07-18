@@ -1,0 +1,122 @@
+{
+  "LOGIN": {
+    "TITLE": "Welcome to e-Hospital"
+  },
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "Main"
+    },
+    "FROUNT-OFFICE": {
+      "TEXT": "Frount Office",
+      "LIST": {
+        "ADMISSION": "Admission Inquiry",
+        "VISITORS": "Visitors Book",
+        "COMPLAINTS": "Complaints"
+      }
+    },
+    "DASHBOARD": {
+      "TEXT": "Dashboard",
+      "LIST": {
+        "DASHBOARD1": "Dashboard 1",
+        "DASHBOARD2": "Dashboard 2",
+        "GENERAL": "General",
+        "HOSPITAL": "Hospital",
+        "DOCTOR-DASHBOARD": "Doctor Dashboard",
+        "PATIENT-DASHBOARD": "Patient Dashboard"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Doctors",
+      "LIST": {
+        "ALL-DOCTORS": "All Doctors",
+        "ADD-DOCTOR": "Add Doctor",
+        "EDIT-DOCTOR": "Edit Doctor",
+        "ABOUT-DOCTOR": "About Doctor",
+        "DOCTOR-TIMETABLE": "Doctor Timetable",
+        "ASSIGN-CLASS-DOCTOR": "Assign Class Doctor"
+      }
+    },
+    "ADMINS": {
+      "TEXT": "Admins",
+      "LIST": {
+        "ALL-ADMINS": "All Admins",
+        "ADD-ADMIN": "Add Admin",
+        "EDIT-ADMIN": "Edit Admin",
+        "ABOUT-ADMIN": "About Admin",
+        "ADMIN-TIMETABLE": "Admin Timetable",
+        "ASSIGN-CLASS-ADMIN": "Assign Class Admin"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Patients",
+      "LIST": {
+        "ALL-PATIENTS": "All Patients",
+        "ADD-PATIENT": "Add Patient",
+        "EDIT-PATIENT": "Edit Patient",
+        "ABOUT-PATIENT": "About Patient",
+        "PATIENT-ATTENDANCE": "Patient Attendance"
+      }
+    },
+    "DOCTOR": {
+      "TEXT": "Doctor",
+      "LIST": {
+        "DASHBOARD": "Dashboard",
+        "RDV": "Appointments",
+        "HOSPITAL": "Hospital",
+        "PATIENT": "My Patients",
+        "CONSULTATION": "My Consultations",
+        "TIME-TABLE": "Time Table"
+      }
+    },
+    "PATIENT": {
+      "TEXT": "Patient",
+      "LIST": {
+        "DASHBOARD": "Dashboard",
+        "RDV": "Appointments",
+        "MEDICAL-FILE": "Medical File",
+        "TIME-TABLE": "Time Table",
+        "PROFILE": "Profile",
+        "DOCTORS" : "Doctors"
+      }
+    },
+    "GENERAL": {
+      "TEXT": "General",
+      "LIST": {
+        "ABOUT": "About",
+        "CONTACT-US": "Contact Us",
+        "HELP": "Help",
+        "SETTINGS": "Settings"
+      }
+    },
+    "APPS": {
+      "TEXT": "Apps"
+    },
+    "CALENDAR": {
+      "TEXT": "Appointments"
+    },
+    "HOSPITALS": {
+      "TEXT": "Hospitals"
+    },
+      "PROFILE":{
+        "TEXT": "Profile",
+        "LIST": {
+          "VIEW-PROFILE": "View Profile",
+          "EDIT-PROFILE": "Edit Profile",
+          "CHANGE-PASSWORD": "Change Password"
+        }
+      },
+    "MESSAGES": {
+      "TEXT": "Messages",
+      "LIST": {
+        "INBOX": "Inbox",
+        "SENT": "Sent",
+        "DRAFTS": "Drafts",
+        "TRASH": "Trash"
+      }
+    },
+    "NEW": {
+      "TEXT" : "New"
+    }
+    
+  }
+}

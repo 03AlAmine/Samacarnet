@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/ckeditor__ckeditor5-build-classic": "^29.0.1",
+    "@types/ckeditor__ckeditor5-watchdog": "^29.0.1"
+  }
+}

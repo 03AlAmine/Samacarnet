@@ -1,0 +1,34 @@
+/* src/app/doctor/appointment-list/appointment-list.component.scss */
+/* appointment.component.scss */
+:host {
+  display: block;
+  margin-left: 250px;
+  padding: 2rem;
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 30px);
+  
+  @media (max-width: 992px) {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+.appointment-list-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  .card-header {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  
+  .table {
+    margin-bottom: 0;
+    
+    th {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+  }
+}
